@@ -34,4 +34,25 @@ const uploadFile = (buffer, name, type) => {
 //file post route
 app.post('/photo-upload', (request, response) => {
   const form = new multiparty.Form();
-})
+  form.parse(request, async (error, fields, files) => {
+    if (error) {
+      console.error('There was an error with parsing the form to upload the file: ', error);
+    }
+    try {
+      const path = files.file[0].path;
+      const buffer = fs.readFileSync(path);
+      const type = fileType(buffer);
+      const timestamp = Date.now().toString();
+      const fileName = `tsProfile-${timestamp}`;
+      const data = await uploadFile(buffer, fileName, type);
+      return response.status(201).send(data);
+    } catch (error) {
+      return response.status(400).send(error);
+    }
+  });
+});
+
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
+  console.log(`EC2 Magic happens on port ${port}!`);
+});

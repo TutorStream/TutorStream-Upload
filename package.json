@@ -4,7 +4,9 @@
   "description": "Upload service for TutorStream, running instances of AWS' EC2 &amp; S3",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run react-dev | npm run server-dev",
+    "react-dev": "webpack -d --watch",
+    "server-dev": "nodemon server/index.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,9 @@
     "multiparty": "^4.1.4"
   },
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "nodemon": "^1.17.5",
     "webpack": "^4.15.1"
   }
 }
