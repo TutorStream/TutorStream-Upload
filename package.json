@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run react-dev | npm run server-dev",
     "react-dev": "webpack -d --watch",
-    "server-dev": "nodemon server/index.js"
+    "server-dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/TutorStream/TutorStream-Upload#readme",
   "dependencies": {
     "aws-sdk": "^2.270.1",
+    "axios": "^0.18.0",
     "bluebird": "^3.5.1",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
@@ -27,11 +28,22 @@
     "fs": "0.0.1-security",
     "multiparty": "^4.1.4",
     "nodemon": "^1.17.5",
-    "webpack-cli": "^3.0.8"
+    "path": "^0.12.7",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^2.1.4"
   },
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
-    "webpack": "^4.15.1"
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.0",
+    "eslint-plugin-react": "^7.10.0"
   }
 }

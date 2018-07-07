@@ -4,9 +4,11 @@ const fs = require('fs');
 const fileType = require('file-type');
 const bluebird = require('bluebird');
 const multiparty = require('multiparty');
+const path = require('path');
 require('dotenv').config();
 
 const app = express();
+app.use(express.static(path.join(__dirname, './client/dist')));
 
 //S3 keys
 AWS.config.update({
