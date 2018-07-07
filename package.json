@@ -1,0 +1,37 @@
+{
+  "name": "tutorstream-upload",
+  "version": "1.0.0",
+  "description": "Upload service for TutorStream, running instances of AWS' EC2 &amp; S3",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run react-dev | npm run server-dev",
+    "react-dev": "webpack -d --watch",
+    "server-dev": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TutorStream/TutorStream-Upload.git"
+  },
+  "author": "John Cynn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TutorStream/TutorStream-Upload/issues"
+  },
+  "homepage": "https://github.com/TutorStream/TutorStream-Upload#readme",
+  "dependencies": {
+    "aws-sdk": "^2.270.1",
+    "bluebird": "^3.5.1",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "file-type": "^8.0.0",
+    "fs": "0.0.1-security",
+    "multiparty": "^4.1.4",
+    "nodemon": "^1.17.5",
+    "webpack-cli": "^3.0.8"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "webpack": "^4.15.1"
+  }
+}
