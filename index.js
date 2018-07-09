@@ -5,10 +5,13 @@ const fileType = require('file-type');
 const bluebird = require('bluebird');
 const multiparty = require('multiparty');
 const path = require('path');
+const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
+
 app.use(express.static(path.join(__dirname, './client/dist')));
+app.use(cors());
 
 //S3 keys
 AWS.config.update({
